@@ -20,3 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/top', 'MemoController@index')->name('top');
+Route::post('/store', 'MemoController@store')->name('store');
+Route::get('/edit/{id}', 'MemoController@edit')->name('edit');
+Route::post('/update', 'MemoController@update')->name('update');
+Route::post('/delete/{id}', 'MemoController@delete')->name('delete');
