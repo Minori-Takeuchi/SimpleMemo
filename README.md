@@ -2,6 +2,9 @@
 
 ログイン機能付き簡易メモアプリ    
   
+![image](https://github.com/Minori-Takeuchi/SimpleMemo/assets/119908511/3aed8b82-38f8-498b-83f6-b2718f28cf65)  
+![image](https://github.com/Minori-Takeuchi/SimpleMemo/assets/119908511/7bebbaeb-5bb2-4cba-b351-9cda08f301f3)  
+
 
 
 
