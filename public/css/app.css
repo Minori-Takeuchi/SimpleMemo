@@ -2575,6 +2575,10 @@ textarea.form-control.is-invalid {
   width: 100%;
 }
 
+.button {
+  width: 60px;
+}
+
 @media (min-width: 576px) {
   .form-inline label {
     display: flex;
@@ -10836,6 +10840,24 @@ a.text-dark:focus {
 .invisible {
   visibility: hidden !important;
 }
+
+.content {
+  text-align: center;
+  background-image: url('/image/simple.jpg');
+  background-size: 100% auto;
+}
+
+.title {
+  font-size: 84px;
+  text-shadow: 2px 2px #6c757d;
+  margin-top: 250px;
+  color:#adb5bd;
+}
+
+.m-b-md {
+  margin-bottom: 30px;
+}
+
 
 @media print {
   *,

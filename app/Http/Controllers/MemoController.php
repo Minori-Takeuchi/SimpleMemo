@@ -21,7 +21,7 @@ class MemoController extends Controller
         });
 
         
-        return view('index',[
+        return view('home',[
             'memos' => $formattedMemos
         ]);
     }
@@ -35,16 +35,20 @@ class MemoController extends Controller
             'user_id' => $userId,
             'text' => $text,
         ]);
-        return redirect('/top');
+        return redirect('/home')->with('success_message', 'メモを作成しました');
     }
 
-    public function edit($id)
+    public function edit(Request $request)
     {
-        if($id) {
-            $memo = Memo::select('id','text')->find($id);
+        if($request->id) {
+            if($request->input('back') == 'back') {
+            return redirect('/home')->withInput();
+            }
+
+            $memo = Memo::select('id','text')->find($request->id);
             return view('edit',compact('memo'));
         } else {
-            return redirect('/top');
+            return redirect('/home');
         }
     }
     
@@ -53,14 +57,14 @@ class MemoController extends Controller
             Memo::find($request->id)->update([
                 'text' => $request->text
             ]);
-            return redirect('/top');
+            return redirect('/home')->with('success_message', 'メモを変更しました');
     }
 
     public function delete($id)
     {
         if($id) {
             Memo::find($id)->delete();
-            return back();
+            return back()->with('success_message', 'メモを削除しました');
         } else {
             return back();
         }
