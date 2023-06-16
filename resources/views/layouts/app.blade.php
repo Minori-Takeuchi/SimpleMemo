@@ -91,7 +91,7 @@
 
         {{-- メインコンテンツ --}}
         <main class="py-4 mt-5">
-            <h3 class="text-center w-">@yield('title')</h3>
+            <h3 class="text-center">@yield('title')</h3>
             @yield('content')
         </main>
     </div>
