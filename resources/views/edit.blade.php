@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title','No.'. $memo->id .'　メモ編集')
+
 @section('content')
 <div class="container">
   <form action="/update" method="post" class="mt-5 d-flex justify-content-center flex-wrap">
